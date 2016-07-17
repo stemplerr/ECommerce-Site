@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "AddCategory";
+}
+@model Class_6_21.Models.AddProductViewModel
+@using ECommerce.Data;
+<div class="well" style="width: 500px;">
+    <form method="post" action="/admin/insertcategory">
+        <label>Category Name</label>
+        <br />
+        <input type="text" class="form-control" name="name" />
+        <br />
+        <button class="btn btn-info">Submit</button>
+        <br />
+    </form>
+</div>

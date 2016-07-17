@@ -1,0 +1,6 @@
+C:\Users\Rochel Faiga\Documents\Visual Studio 2013\Projects\Class 6-21\ECommerce.Data\bin\Debug\ECommerce.Data.dll.config
+C:\Users\Rochel Faiga\Documents\Visual Studio 2013\Projects\Class 6-21\ECommerce.Data\bin\Debug\ECommerce.Data.dll
+C:\Users\Rochel Faiga\Documents\Visual Studio 2013\Projects\Class 6-21\ECommerce.Data\bin\Debug\ECommerce.Data.pdb
+C:\Users\Rochel Faiga\Documents\Visual Studio 2013\Projects\Class 6-21\ECommerce.Data\obj\Debug\ECommerce.Data.csprojResolveAssemblyReference.cache
+C:\Users\Rochel Faiga\Documents\Visual Studio 2013\Projects\Class 6-21\ECommerce.Data\obj\Debug\ECommerce.Data.dll
+C:\Users\Rochel Faiga\Documents\Visual Studio 2013\Projects\Class 6-21\ECommerce.Data\obj\Debug\ECommerce.Data.pdb

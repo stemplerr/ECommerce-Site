@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "ProductPage";
+}
+
+@using ECommerce.Data;
+@model Class_6_21.Models.ProductPageViewModel
+<br />
+<div class="alert alert-success  hide" role="alert">
+    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    Item added to cart!
+</div>
+<div class="well">
+    <div class="thumbnail">
+        @if (Model.Product.Images != null)
+        {
+            foreach (Image i in Model.Product.Images)
+            {
+               <img src="~/Images/@i.ImageFileName" style="width:175px;" alt="">
+            }
+        }
+        <div class="caption">
+            <h4 class="pull-right">$@String.Format("{0:0.00}", Model.Product.Price)</h4>
+            <h4> @Model.Product.Name</h4>
+            <p>@Model.Product.Description</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="ratings">
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                  <input type="hidden" value="@Model.Product.Id" id="productid"/>
+                <button class="add-to-cart-button btn btn-warning">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/Index.js"></script>
+}

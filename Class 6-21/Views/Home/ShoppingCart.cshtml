@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "ShoppingCart";
+}
+@using ECommerce.Data;
+@model Class_6_21.Models.ShoppingCartViewModel
+
+@foreach (Product p in Model.Products)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4" style="display:inline-block">
+        <div class="thumbnail">
+            @if (p.Images != null)
+            {
+                foreach (Image i in p.Images)
+                {
+                    <a href="/home/productpage?productid=@p.Id">
+                        <img src="~/Images/@i.ImageFileName" style="width:175px;" alt="">
+                    </a>
+                }
+            }
+            <div class="caption">
+                <h4 class="pull-right">$@String.Format("{0:0.00}", p.Price)</h4>
+                <h4>
+                    <a href="/home/productpage?productid=@p.Id">@p.Name</a>
+                </h4>
+                <p>@p.Description</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="ratings">
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<button class="btn btn-success">Place Order</button>

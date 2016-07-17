@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "AddProduct";
+}
+@model Class_6_21.Models.AddProductViewModel
+@using ECommerce.Data;
+<div class="well" style="width: 500px;">
+    <form method="post" action="/admin/insertproduct" enctype="multipart/form-data">
+        <label for="name-textbox">Product Name</label>
+        <br />
+        <input type="text" id="name-textbox" class="form-control" name="name" />
+        <br />
+        <label for="price-textbox">Price</label>
+        <br />
+        <input type="text" id="price-textbox" class="form-control" name="price" />
+        <br />
+        <label for="description-textbox">Description</label>
+        <br />
+        <input type="text" id="description-textbox" class="form-control" name="description" />
+        <br />
+        <label for="category-select">Select A Category</label>
+        <br />
+        <select type="text" id="category-select" class="form-control" name="categoryid">
+            @foreach (Category c in Model.Categories)
+            {
+                <option value="@c.Id">@c.Name</option>
+            }
+        </select>
+        <br />
+        <label for="image">Add An Image</label>
+        <br />
+        <input type="file" id="image" class="form-control" name="image" />
+        <br />
+        <button class="btn btn-info">Submit</button>
+    </form>
+</div>
+
+@section scripts
+{
+<script src="~/Scripts/Index.js"></script>
+}
